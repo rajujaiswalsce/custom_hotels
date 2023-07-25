@@ -1,0 +1,7 @@
+custom_hotels.home_page:
+  path: '/hotels'
+  defaults:
+    _controller: '\Drupal\custom_hotels\Controller\CustomHotelsController::homePage'
+    _title: 'CUSTOM PAGE'
+  requirements:
+    _permission: 'access content'

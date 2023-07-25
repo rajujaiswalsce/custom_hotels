@@ -1,0 +1,5 @@
+custom-style:
+  version: 1.x
+  css:
+    theme:
+      css/custom-style.css: {}

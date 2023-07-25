@@ -1,0 +1,22 @@
+<?php 
+/**
+ * Implements hook_theme().
+ */
+function custom_hotels_theme($existing, $type, $theme, $path) {
+  return [
+    'testing' => [
+      'variables' => [
+        'hotels' => NULL,
+       ],
+      'template' => 'my_custom_template',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+
+function custom_hotels_page_attachments(array &$attachments) {
+    $attachments['#attached']['library'][] = 'custom_hotels/custom-style';
+  }

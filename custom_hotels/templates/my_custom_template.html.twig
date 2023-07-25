@@ -1,0 +1,30 @@
+<div class="container">
+<div class="row">
+{% for key, data in hotels %}
+<section class="card__image col-md-3">
+<div class="card__main_part">
+    <div class="card__item">
+      <div class="title_rating">
+            Rates from
+            <strong>${{ data.external_urls.external_url_0.price_summary.display_price}}/night</strong>
+        </div>    
+            <img src= {{ data.thumbnail }} />   
+    </div>
+    <div class="title_outside">
+        <div class="title__hotel">
+            <div class="search__titlehotel">
+                {{ data.name }}
+            </div>
+            <div class="title__hotel__location">
+                <div class="title__prop">
+                    <span>{{ data.address.address_line_one }}</span> - <span>{{ data.address.state_name }}</span>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+  </div>
+</section>
+{% endfor %}
+</div>
+</div>
